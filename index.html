@@ -4,31 +4,34 @@
   <title>Foto Finder</title>
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header role="header">
     <h1>FOTO<img class="header__logo" aria-hidden="true" src="img/foto-finder-logo.svg">FINDER</h1>
-    <form role="form">
+    <form role="form" class="first-form">
       <label for="title">Title</label>
         <input class="header__input" type="text">
       <label for="caption">Caption</label>
         <input class="header__input" type="text">
     </form>
     <aside class="header__aside">
-      <button class="header__btn choose-file">Choose File</button>
-      <button class="header__btn add-to-album">Add to Album</button>
+      <form role="form">
+        <input type="file" name="file" id="file" class="header__file" />
+        <label for="file">Choose a file</label>
+        <input type="submit" value="Add to Album" aria-label="add-to-album" class="header__btn" />
+      </form>
     </aside>
   </header>
   <main role="main">
-    <section class="prepend-card">
-      <article class="main__article">
-        <h2>Waterfall Image</h2>
-        <img class="article__photo" src="photos/photo_01.jpeg">
+    <section class="wrapper">
+      <article class="new-article">
+        <p>Waterfall Image</p>
+        <img class="new-article__photo" src="photos/photo_01.jpeg">
         <p>A cheeseburger is more than just a sandwich, it is a wish fulfilled.</p>
-        <aside class="article__aside"> 
-          <img class="aside__icon" src="img/delete.svg">
-          <img class="aside__icon favorite" src="img/favorite.svg">
+        <aside class="new-article__aside"> 
+          <img class="aside__icon delete">
+          <img class="aside__icon favorite">
         </aside>
       </article>
     </section> 

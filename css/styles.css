@@ -33,7 +33,7 @@ h1 {
   padding: 0 16px 0 16px;
 }
 
-form {
+.first-form {
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
@@ -46,38 +46,82 @@ form {
   height: 41px;
 }
 
-.header__btn {
-  width: 227px;
-  margin: 45px 29px;
+.header__btn,
+#file + label {
+  width: 215px;
+  margin: 45px 22px;
   padding: 1.4rem;
   background-color: #5B4447;
   color: #FFFFFF;
   font-size: 1.5rem;
+  display: inline-block;
+  text-align: center;
+  font-weight: 400;
 }
 
-.header__btn:hover {
+.header__file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.header__btn:hover,
+#file + label:hover {
   background-color: #938284;
 }
 
-.main__article {
-  display: flex;
-  flex-direction: column;
-  width: 205px;
-  background-color: #FFFFFF;
+.wrapper {
+  padding: 40px 65px 30px 40px;
 }
 
-.article__photo {
+.new-article {
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  border: 1.2px solid #938284;
+  background-color: #FFFFFF;
+  color: #3E2A35;
+  font-size: 1rem;
+
+}
+
+p {
+  padding: 12px 12px 10px;
+  font-size: 1.6rem;
+}
+
+.new-article__photo {
   width: 100%;
 }
 
-.article__aside {
+.new-article__aside {
   background-color: #5B4447;
 }
 
 .aside__icon {
-  width: 30px;
+  margin: 8px;
+  padding: 1.4rem;
+}
+
+.delete {
+  background-image: url("../img/delete.svg");
+  background-repeat: no-repeat;
+
+}
+
+.delete:hover {
+  background-image: url("../img/delete-active.svg");
 }
 
 .favorite {
+  background-image: url("../img/favorite.svg");
+  background-repeat: no-repeat;
   float: right;
+}
+
+.favorite:hover {
+  background-image: url("../img/favorite-active.svg");
 }
